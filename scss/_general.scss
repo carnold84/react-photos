@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.remove {
+    display: none !important;
+}

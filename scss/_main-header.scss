@@ -1,0 +1,23 @@
+.main-header {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: rgb(234, 234, 234) solid 1px;
+}
+
+.main-header__title {
+    height: 100%;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    color: rgb(0, 0, 0);
+    margin: 0 0 0 15px;
+    padding: 0;
+    display: table;
+}
+
+.main-header__title-inner {
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}

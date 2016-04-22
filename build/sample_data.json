@@ -1,0 +1,56 @@
+{
+    "albums" : [
+        {
+            "id" : 0,
+            "title" : "Lille - Day 1",
+            "photos" : [
+                {
+                    "title" : "Statue",
+                    "url" : "sample_images/IMG_20160408_172847.jpg"
+                },
+                {
+                    "title" : "Newly renovated Lille Cathedral",
+                    "url" : "sample_images/IMG_20160408_160007.jpg"
+                },
+                {
+                    "title" : "Interior of Lille Cathedral",
+                    "url" : "sample_images/IMG_20160408_155644.jpg"
+                },
+                {
+                    "title" : "Lille Old Town Gate",
+                    "url" : "sample_images/IMG_20160408_154610.jpg"
+                },
+                {
+                    "title" : "War Memorial",
+                    "url" : "sample_images/IMG_20160408_141327.jpg"
+                }
+            ]
+        },
+        {
+            "id" : 1,
+            "title" : "Lille - Day 2",
+            "photos" : [
+                {
+                    "title" : "Lille City Centre",
+                    "url" : "sample_images/IMG_20160408_140952.jpg"
+                },
+                {
+                    "title" : "Lille Town Hall",
+                    "url" : "sample_images/IMG_20160408_140948.jpg"
+                },
+                {
+                    "title" : "Lille Opera House",
+                    "url" : "sample_images/IMG_20160408_140945.jpg"
+                },
+                {
+                    "title" : "Capybara at Lille Zoo",
+                    "url" : "sample_images/IMG_20160408_110724.jpg"
+                },
+                {
+                    "title" : "Meerkats at Lille Zoo",
+                    "url" : "sample_images/IMG_20160408_105103.jpg"
+                }
+            ]
+        }
+    ]
+}

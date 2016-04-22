@@ -1,0 +1,8 @@
+{
+    "name": "React Photos App",
+    "version": "0.1",
+    "devDependencies": {},
+    "dependencies": {
+        "babel-preset-react": "^6.5.0"
+    }
+}
