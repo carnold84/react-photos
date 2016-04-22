@@ -11,6 +11,7 @@ var Image = React.createClass({
 
         var markup, style, title;
 
+        // set title if it exists
         if (this.props.title) {
 
             title = React.createElement(
@@ -20,10 +21,12 @@ var Image = React.createClass({
             );
         }
 
+        // use image as a background image style
         style = {
             backgroundImage: 'url(' + this.props.imageUrl + ')'
         };
 
+        // make element a link if it has a callback or a div if not
         if (this.props.callback) {
 
             markup = React.createElement(
