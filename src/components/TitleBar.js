@@ -1,10 +1,5 @@
 var TitleBar = React.createClass({
     
-    componentDidMount : function () {
-        
-        console.log('TitleBar mounted');
-    },
-    
     onBackClick : function (evt) {
         
         this.props.callback();

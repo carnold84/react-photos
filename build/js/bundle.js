@@ -210,3 +210,107 @@ var ReactPhotos = React.createClass({
 });
 
 ReactDOM.render(React.createElement(ReactPhotos, { source: 'sample_data.json' }), document.getElementById('container'));
+
+var Grid = React.createClass({
+    displayName: "Grid",
+
+
+    render: function () {
+
+        var items = this.props.items;
+
+        return React.createElement(
+            "div",
+            { className: "grid" },
+            items
+        );
+    }
+});
+
+var Image = React.createClass({
+    displayName: 'Image',
+
+
+    render: function () {
+
+        var markup, style, title;
+
+        // set title if it exists
+        if (this.props.title) {
+
+            title = React.createElement(
+                'h3',
+                { className: 'image__title' },
+                this.props.title
+            );
+        }
+
+        // use image as a background image style
+        style = {
+            backgroundImage: 'url(' + this.props.imageUrl + ')'
+        };
+
+        // make element a link if it has a callback or a div if not
+        if (this.props.callback) {
+
+            markup = React.createElement(
+                'a',
+                { className: 'image', onClick: this.props.callback, 'data-index': this.props.index, href: '#', style: style },
+                title
+            );
+        } else {
+
+            markup = React.createElement(
+                'div',
+                { className: 'image', style: style },
+                title
+            );
+        }
+
+        return markup;
+    }
+});
+
+var Slide = React.createClass({
+    displayName: 'Slide',
+
+
+    render: function () {
+
+        var style = {
+            backgroundImage: 'url(' + this.props.imageUrl + ')'
+        };
+
+        return React.createElement('div', { className: 'slide', style: style });
+    }
+});
+
+var TitleBar = React.createClass({
+    displayName: "TitleBar",
+
+
+    onBackClick: function (evt) {
+
+        this.props.callback();
+
+        evt.preventDefault();
+    },
+
+    render: function () {
+
+        return React.createElement(
+            "header",
+            { className: "title-bar" },
+            React.createElement("a", { className: "title-bar__back-btn", href: "#", onClick: this.onBackClick, title: "Back" }),
+            React.createElement(
+                "h2",
+                { className: "title-bar__title" },
+                React.createElement(
+                    "span",
+                    { className: "title-bar__title-inner" },
+                    this.props.title
+                )
+            )
+        );
+    }
+});

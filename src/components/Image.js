@@ -1,10 +1,5 @@
 var Image = React.createClass({
     
-    componentDidMount : function () {
-        
-        console.log('Image mounted');
-    },
-    
     render : function () {
         
         var markup,

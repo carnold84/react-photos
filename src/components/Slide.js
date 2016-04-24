@@ -1,10 +1,5 @@
 var Slide = React.createClass({
     
-    componentDidMount : function () {
-        
-        console.log('Slide mounted');
-    },
-    
     render : function () {
         
         var style = {
