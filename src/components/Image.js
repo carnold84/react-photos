@@ -4,12 +4,13 @@ var Image = React.createClass({
         
         var markup,
             style,
-            title;
+            title = this.props.title,
+            title_markup;
         
         // set title if it exists
-        if (this.props.title) {
+        if (title !== undefined && title !== "") {
             
-            title = <h3 className="image__title">{this.props.title}</h3>;
+            title_markup = <h3 className="image__title">{this.props.title}</h3>;
         }
         
         // use image as a background image style
@@ -21,13 +22,13 @@ var Image = React.createClass({
         if (this.props.callback) {
             
             markup = <a className="image" onClick={this.props.callback} data-index={this.props.index} href="#" style={style}>
-                        {title}
+                        {title_markup}
                     </a>;
                 
         } else {
             
             markup = <div className="image" style={style}>
-                        {title}
+                        {title_markup}
                     </div>;
         }
         

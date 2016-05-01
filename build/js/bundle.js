@@ -228,19 +228,22 @@ var Grid = React.createClass({
 });
 
 var Image = React.createClass({
-    displayName: 'Image',
+    displayName: "Image",
 
 
     render: function () {
 
-        var markup, style, title;
+        var markup,
+            style,
+            title = this.props.title,
+            title_markup;
 
         // set title if it exists
-        if (this.props.title) {
+        if (title !== undefined && title !== "") {
 
-            title = React.createElement(
-                'h3',
-                { className: 'image__title' },
+            title_markup = React.createElement(
+                "h3",
+                { className: "image__title" },
                 this.props.title
             );
         }
@@ -254,16 +257,16 @@ var Image = React.createClass({
         if (this.props.callback) {
 
             markup = React.createElement(
-                'a',
-                { className: 'image', onClick: this.props.callback, 'data-index': this.props.index, href: '#', style: style },
-                title
+                "a",
+                { className: "image", onClick: this.props.callback, "data-index": this.props.index, href: "#", style: style },
+                title_markup
             );
         } else {
 
             markup = React.createElement(
-                'div',
-                { className: 'image', style: style },
-                title
+                "div",
+                { className: "image", style: style },
+                title_markup
             );
         }
 

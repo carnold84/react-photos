@@ -52,8 +52,8 @@ module.exports = function(grunt) {
         },
         watch: {
             src: {
-              files: ['src/**/*.js', 'css/**/*.scss'],
-              tasks: ['default'],
+              files: ['src/**/*.js', 'scss/**/*.scss'],
+              tasks: ['default']
             }
         }
     });
